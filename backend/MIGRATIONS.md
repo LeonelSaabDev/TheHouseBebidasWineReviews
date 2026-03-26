@@ -37,7 +37,7 @@ En `TheHouseBebidas.WineReviews.Api/appsettings.Development.json` debe existir:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=DESKTOP-VSHD1IR\\MSSQLSERVERLIO;Database=THWineReviews;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=TU_SERVIDOR_SQL;Database=TheHouseBebidasWineReviews;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
   },
   "AdminSeed": {
     "Username": "admin.dev",
