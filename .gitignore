@@ -1,0 +1,35 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Local env and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/playwright-report/
+frontend/test-results/
+frontend/.vite/
+
+# Backend artifacts
+backend/.vs/
+backend/**/bin/
+backend/**/obj/
+backend/**/*.user
+backend/**/*.suo
+backend/api-smoke.log
+
+# Dotnet user secrets metadata (local only)
+backend/**/secrets.json
+
+# Local development config with machine-specific values
+backend/**/appsettings.Development.json

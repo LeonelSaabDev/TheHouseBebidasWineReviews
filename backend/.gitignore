@@ -1,0 +1,19 @@
+# IDE
+.vs/
+
+# Build output
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+
+# Local logs
+api-smoke.log
+
+# User secrets (local machine)
+**/secrets.json
+
+# Local development config with machine-specific values
+**/appsettings.Development.json

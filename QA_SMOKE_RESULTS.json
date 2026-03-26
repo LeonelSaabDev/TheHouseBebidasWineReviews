@@ -1,0 +1,75 @@
+{
+  "public_get_wines": {
+    "status": 200,
+    "count": 6
+  },
+  "selected_wine_id": "e2b338cd-b375-4f2b-bb08-80b2f2866c24",
+  "public_get_wine_by_id": {
+    "status": 200,
+    "id": "e2b338cd-b375-4f2b-bb08-80b2f2866c24"
+  },
+  "public_get_reviews": {
+    "status": 200,
+    "count": 8
+  },
+  "public_post_review_valid": {
+    "status": 201,
+    "id": "992cd759-c805-40e6-b55a-f2d9a4dc669a"
+  },
+  "public_post_review_invalid_missing_comment": {
+    "status": 400,
+    "body": {
+      "type": "https://tools.ietf.org/html/rfc9110#section-15.5.1",
+      "title": "One or more validation errors occurred.",
+      "status": 400,
+      "errors": {
+        "Comment": [
+          "The Comment field is required."
+        ]
+      },
+      "traceId": "00-3a1ae56f3909ad346a8b6f840a29709d-37a37da097af6a14-00"
+    }
+  },
+  "public_post_review_invalid_out_of_range": {
+    "status": 400,
+    "body": {
+      "type": "https://httpstatuses.com/400",
+      "title": "Bad Request",
+      "status": 400,
+      "detail": "Rating must be between 1 and 5. (Parameter 'rating')",
+      "instance": "/api/wines/e2b338cd-b375-4f2b-bb08-80b2f2866c24/reviews"
+    }
+  },
+  "rate_limit_burst_statuses": [
+    201,
+    201,
+    429,
+    429,
+    429,
+    429,
+    429
+  ],
+  "rate_limit_429_observed": true,
+  "admin_login_valid": {
+    "status": 200,
+    "token_received": true
+  },
+  "admin_login_invalid": {
+    "status": 401,
+    "body": {
+      "type": "https://httpstatuses.com/401",
+      "title": "Unauthorized",
+      "status": 401,
+      "detail": "Invalid admin credentials.",
+      "instance": "/api/admin/auth/login"
+    }
+  },
+  "admin_reviews_without_token": {
+    "status": 401,
+    "body": null
+  },
+  "admin_reviews_with_token": {
+    "status": 200,
+    "count": 24
+  }
+}
